@@ -7,16 +7,67 @@
 
 body {
   background-color: #f1faee;
+  min-height: 100vh;
 }
 
-.switch {
+.switchButton {
   width: 75px;
   height: 30px;
   display: inline-block;
   background-color: #e63946;
   border-radius: 20px;
   position: absolute;
-  left: 85%;
+  left: 75%;
+  top: 10px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+
+    &:checked + .switchButton__checkbox__label:before {
+      opacity: 0;
+     // transition: all 0.8s ease-out;
+    }
+
+    & + .switchButton__checkbox__label {
+      user-select: none;
+      pointer-events: none;
+
+      &:before {
+        //boton posandose arriba
+        content: "";
+        background: #1d3557;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 30px;
+      }
+     
+    }
+  }
 }
 
 .navBar {
@@ -24,7 +75,12 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 50%;
+    top: 20%;
+    transform: translateY(-50%);
+    padding-left: 20px;
+    & svg path {
+      fill: #1d3557;
+    }
 
     &__button {
       width: 50px;
@@ -35,7 +91,7 @@ body {
       color: #f0f3bd;
       text-align: center;
       text-decoration: none;
-      //font-size: 40px;
+      font-size: 40px;
       border-radius: 50px;
     }
     &__button:hover {
@@ -46,11 +102,14 @@ body {
   }
 }
 
-
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
 
   &__list {
     &__menu {
@@ -59,35 +118,36 @@ body {
       margin: 0px;
       & li {
         margin: 10px;
-        width: auto;
+        min-width: 60px;
         text-align: center;
-        & svg path  {
-          
+        & svg path {
           fill: #1d3557;
-        } 
+        }
       }
     }
-
   }
 
   .title {
     & h1 {
-    margin-top: 100px;
-    font-family: "Roboto", sans-serif;
-    font-size: 40px;
-    color: #1d3557;
-  }}
-  
+      text-align: center;
+      margin-top: 100px;
+      font-family: "Roboto", sans-serif;
+      font-size: 40px;
+      color: #1d3557;
+    }
+  }
+
   .title2 {
     & h2 {
-    margin: 0px;
-    font-family: "Roboto", sans-serif;
-  font-size: 30px;
-  color: #1d3557;
-  }}
-  
+      text-align: center;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-family: "Roboto", sans-serif;
+      font-size: 30px;
+      color: #1d3557;
+    }
+  }
 }
-
 
 .about,
 .portfolio,
