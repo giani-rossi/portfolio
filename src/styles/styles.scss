@@ -17,7 +17,7 @@ body {
   background-color: #e63946;
   border-radius: 20px;
   position: absolute;
-  left: 75%;
+  left: 80%;
   top: 10px;
 
   &:before {
@@ -138,13 +138,14 @@ body {
   }
 
   .title2 {
-    & h2 {
+    & p {
       text-align: center;
+      font-style: italic;
       margin-top: 25px;
       margin-bottom: 25px;
       font-family: "Roboto", sans-serif;
       font-size: 30px;
-      color: #1d3557;
+      color: #e63946;
     }
   }
 }

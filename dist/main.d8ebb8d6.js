@@ -118,7 +118,62 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"scripts/main.js":[function(require,module,exports) {
+//  changing colors by time of day
+var time = new Date().getHours();
+console.log(time); // sections
 
+var $day = document.querySelector("#day");
+
+if (time > 6 && time <= 12) {
+  document.querySelector("#day").innerHTML = " morning";
+} else if (time >= 12 && time <= 18) {
+  document.querySelector("#day").innerHTML = " afternoon";
+} else if (time >= 18 && time <= 24) {
+  document.querySelector("#day").innerHTML = " evening";
+} else {
+  document.querySelector("#day").innerHTML = " night";
+}
+
+var typedText = document.querySelector(".title2__container__typed");
+var typedCursor = document.querySelector(".title2__container__cursor");
+var textArray = ["a Telecommunication Engineer", "a Front End developer", "a Football lover", "a Travel addict"];
+var typingDelay = 90;
+var erasingDelay = 80;
+var newTextDelay = 800; // Delay between current and next text
+
+var textArrayIndex = 0;
+var charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if (!typedCursor.classList.contains("typing")) typedCursor.classList.add("typing");
+    typedText.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } else {
+    typedCursor.classList.remove("typing");
+    setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    if (!typedCursor.classList.contains("typing")) typedCursor.classList.add("typing");
+    typedText.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } else {
+    typedCursor.classList.remove("typing");
+    textArrayIndex += 1;
+    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // On DOM Load initiate the effect
+  if (textArray.length) setTimeout(type, newTextDelay + 250);
+});
 },{}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -147,7 +202,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64344" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54011" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
