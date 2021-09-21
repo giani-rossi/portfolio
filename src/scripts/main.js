@@ -9,7 +9,7 @@ if (time > 6 && time <= 12) {
   document.querySelector("#day").innerHTML = " morning";
 } else if (time >= 12 && time <= 18) {
   document.querySelector("#day").innerHTML = " afternoon";
-} else if (time >= 18 && time <= 24) {
+} else if (time >= 18 && time <= 21) {
   document.querySelector("#day").innerHTML = " evening";
 } else {
   document.querySelector("#day").innerHTML = " night";

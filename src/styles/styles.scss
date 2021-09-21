@@ -81,6 +81,9 @@ body {
     & svg path {
       fill: #1d3557;
     }
+    & a {
+      font-size: 10px;
+    }
 
     &__button {
       width: 50px;
@@ -134,6 +137,7 @@ body {
       font-family: "Roboto", sans-serif;
       font-size: 40px;
       color: #1d3557;
+      line-height: 65px;
     }
   }
 
