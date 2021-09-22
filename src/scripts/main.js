@@ -1,3 +1,5 @@
+import '@iconfu/svg-inject'
+
 //  changing colors by time of day
 const time = new Date().getHours();
 console.log(time);
@@ -18,6 +20,7 @@ if (time > 6 && time <= 12) {
 const typedText = document.querySelector(".title2__container__typed");
 const typedCursor = document.querySelector(".title2__container__cursor");
 const textArray = [
+  "Gianina Rossi",
   "a Telecommunication Engineer",
   "a Front End developer",
   "a Football lover",

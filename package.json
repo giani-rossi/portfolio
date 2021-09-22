@@ -21,5 +21,8 @@
     "url": "https://github.com/giani-rossi/portfolio/issues"
   },
   "homepage": "https://github.com/giani-rossi/portfolio#readme",
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "@iconfu/svg-inject": "^1.2.3"
+  }
 }
