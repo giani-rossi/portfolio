@@ -838,7 +838,7 @@ if (time > 6 && time <= 12) {
 
 var typedText = document.querySelector(".title2__container__typed");
 var typedCursor = document.querySelector(".title2__container__cursor");
-var textArray = ["Gianina Rossi", "a Telecommunication Engineer", "a Front End developer", "a Football lover", "a Travel addict"];
+var textArray = ["Gianina Rossi", "a Telecommunication Engineer", "a Web developer", "a Football lover", "a Travel addict"];
 var typingDelay = 90;
 var erasingDelay = 80;
 var newTextDelay = 800; // Delay between current and next text

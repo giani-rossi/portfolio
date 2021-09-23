@@ -22,7 +22,7 @@ const typedCursor = document.querySelector(".title2__container__cursor");
 const textArray = [
   "Gianina Rossi",
   "a Telecommunication Engineer",
-  "a Front End developer",
+  "a Web developer",
   "a Football lover",
   "a Travel addict",
 ];
