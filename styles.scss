@@ -1,0 +1,572 @@
+// main color : #1d3557
+// second color : #457b9d
+// other: #a8dadc
+// other : #ffe8d6
+// other : #f1faee
+// other : #e63946
+
+body {
+  background-color: #f1faee;
+  min-height: 100vh;
+}
+
+p {
+  max-width: 80%;
+}
+
+.switchButton {
+  width: 75px;
+  height: 30px;
+  display: inline-block;
+  background-color: #e63946;
+  border-radius: 20px;
+  position: absolute;
+  left: 80%;
+  top: 10px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+
+    &:checked + .switchButton__checkbox__label:before {
+      opacity: 0;
+      // transition: all 0.8s ease-out;
+    }
+
+    & + .switchButton__checkbox__label {
+      user-select: none;
+      pointer-events: none;
+
+      &:before {
+        //boton posandose arriba
+        content: "";
+        background: #1d3557;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+.navBar {
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 20%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+    & svg path {
+      fill: #1d3557;
+    }
+    & a {
+      font-size: 10px;
+    }
+
+    &__button {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+      display: inline-block;
+      background-color: #e63946;
+      color: #f0f3bd;
+      text-align: center;
+      text-decoration: none;
+      font-size: 40px;
+      border-radius: 50px;
+    }
+    &__button:hover {
+      background-color: #e63946;
+      width: 200px;
+      transition: 0.7s;
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+  &__list {
+    &__menu {
+      display: inline-flex;
+      list-style: none;
+      margin: 0px;
+      & li {
+        margin: 10px;
+        min-width: 60px;
+        text-align: center;
+        & svg path {
+          fill: #1d3557;
+        }
+      }
+    }
+  }
+
+  .title {
+    & h1 {
+      text-align: center;
+      margin-top: 100px;
+      font-family: "Raleway", sans-serif;
+      font-size: 35px;
+      color: #1d3557;
+      font-weight: 600;
+      line-height: 40px;
+    }
+
+  
+  }
+
+  
+
+  .title2 {
+    width: 300px;
+    align-self: flex-end;
+    margin-left: 25px;
+    & p {
+      text-align: center;
+      font-style: italic;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      color: #e63946;
+      font-weight: 500;
+    }
+    @media (min-width: 1024px) {
+    
+  align-self: center;
+
+    }
+  }
+}
+
+.about,
+.portfolio,
+.contact {
+  min-height: 100vh;
+  padding-left: 100px;
+}
+
+.about {
+  & h1 {
+    // margin-top: 50px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    color: #1d3557;
+    line-height: 50px;
+    font-weight: 600;
+  }
+  & h2 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    color: #e63946;
+    font-weight: 400;
+  }
+  & p {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    color: #1d3557;
+    line-height: 25px;
+  }
+  & ul li {
+    margin-top: 20px;
+    // margin-bottom: 20px;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    color: #1d3557;
+    line-height: 20px;
+  }
+  @media (min-width: 768px) {
+    
+    #tablet {
+      position: absolute;
+      top: 100%;
+      transform: translateY(50%);
+    }
+  }
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  &__resume {
+    & h1 {
+      margin-top: 100px;
+      font-family: "Raleway", sans-serif;
+      font-size: 30px;
+      color: #1d3557;
+      font-weight: 600;
+      line-height: 30px;
+    }
+    & h2 {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      color: #1d3557;
+      line-height: 25px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    h3 {
+      margin-top: 25px;
+      font-style: italic;
+      margin-bottom: 25px;
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      color: #1d3557;
+      line-height: 20px;
+      font-weight: 600;
+    }
+
+    & p {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      color: #1d3557;
+      line-height: 25px;
+    }
+  }
+  &__skills {
+    margin-top: 50px;
+    & h1 {
+      margin-top: 100px;
+      font-family: "Raleway", sans-serif;
+      font-size: 30px;
+      color: #1d3557;
+      font-weight: 600;
+      line-height: 50px;
+    }
+    & ul li {
+      margin-left: 10px;
+      // margin-top: 20px;
+      // margin-bottom: 20px;
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      color: #1d3557;
+      line-height: 20px;
+    }
+    &__keys {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+  }
+
+  &__projects {
+    margin-top: 50px;
+    & h1 {
+      margin-top: 100px;
+      font-family: "Raleway", sans-serif;
+      font-size: 30px;
+      color: #1d3557;
+      font-weight: 600;
+      line-height: 50px;
+    }
+    & p {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      color: #1d3557;
+      line-height: 25px;
+    }
+    & h2 {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      color: #1d3557;
+      line-height: 25px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    h3 {
+      margin-top: 25px;
+      font-style: italic;
+      margin-bottom: 25px;
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      color: #1d3557;
+      line-height: 20px;
+      font-weight: 600;
+    }
+
+    & p {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      color: #1d3557;
+      line-height: 25px;
+    }
+  }
+}
+
+.contact {
+  & h2 {
+    margin-top: 100px;
+    //margin-bottom: 25px;
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    color: #1d3557;
+    line-height: 25px;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  &__email,
+  a {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    color: #1d3557;
+    line-height: 25px;
+    text-decoration: none;
+  }
+
+  &__social {
+    &__find {
+      margin-top: 25px;
+      margin-bottom: 20px;
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      color: #1d3557;
+      line-height: 25px;
+      text-decoration: none;
+    }
+    &__media,
+    li {
+      display: flex;
+      justify-content: space-evenly;
+      //margin-top: 15px;
+      //margin-bottom: 20px;
+      font-family: "Raleway", sans-serif;
+      font-size: 15px;
+      color: #e63946;
+      line-height: 25px;
+      text-decoration: none;
+    }
+  }
+}
+
+.loginBox {
+  margin-top: 20px;
+  margin-right: 100px;
+  position: absolute;
+  // top: 50%;
+  // left: 50%;
+  right: -40px;
+  width: 300px;
+  padding: 40px;
+  //transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .loginBox {
+    margin-top: 70px;
+    right: 0;
+    transform: translate(-50%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .loginBox {
+    margin-top: 70px;
+    right: 0;
+    transform: translate(-50%);
+    left: 50%;
+  }
+}
+
+.loginBox h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #e63946;
+  text-align: center;
+}
+
+.loginBox {
+  &__user {
+    position: relative;
+  }
+}
+
+.loginBox {
+  &__user {
+    & input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #e63946;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      background: transparent;
+    }
+  }
+}
+
+.loginBox {
+  &__user {
+    & label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #e63946;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+  }
+}
+
+.loginBox form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #e63946;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.loginBox a:hover {
+  background: #1d3557;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.loginBox a span {
+  position: absolute;
+  display: block;
+}
+
+.loginBox a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1d3557);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.loginBox a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #1d3557);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.loginBox a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #1d3557);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.loginBox a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #1d3557);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
