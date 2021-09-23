@@ -164,6 +164,9 @@ p {
     top: 100%;
     transform: translateY(50%); } }
 
+.list {
+  margin-bottom: 70px; }
+
 .portfolio {
   display: flex;
   flex-direction: column;
@@ -297,7 +300,8 @@ p {
   font-size: 15px;
   color: #e63946;
   line-height: 25px;
-  text-decoration: none; }
+  text-decoration: none;
+  margin-left: -50px; }
 
 .loginBox {
   margin-top: 20px;
@@ -357,6 +361,7 @@ p {
 .loginBox form a {
   position: relative;
   display: inline-block;
+  margin-left: 42px;
   padding: 10px 20px;
   color: #e63946;
   font-size: 16px;
