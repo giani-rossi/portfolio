@@ -14,12 +14,15 @@
     "build": "parcel build src/*.html"
   },
   "devDependencies": {
-    "sass": "^1.36.0"
+    "node-sass": "^6.0.1",
+    "sass": "^1.41.0"
   },
   "bugs": {
     "url": "https://github.com/giani-rossi/portfolio/issues"
   },
   "homepage": "https://github.com/giani-rossi/portfolio#readme",
-  "dependencies": {},
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "@iconfu/svg-inject": "^1.2.3"
+  }
 }
