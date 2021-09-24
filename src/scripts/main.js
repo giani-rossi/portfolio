@@ -1,4 +1,4 @@
-import '@iconfu/svg-inject'
+//import '@iconfu/svg-inject'
 
 //  changing colors by time of day
 const time = new Date().getHours();

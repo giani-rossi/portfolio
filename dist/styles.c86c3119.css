@@ -165,7 +165,7 @@ p {
     transform: translateY(50%); } }
 
 .list {
-  margin-bottom: 70px; }
+  margin-bottom: -70px; }
 
 .portfolio {
   display: flex;
