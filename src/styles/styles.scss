@@ -99,12 +99,21 @@ p {
       text-decoration: none;
       font-size: 40px;
       border-radius: 50px;
+      
     }
     &__button:hover {
       background-color: #e63946;
       width: 200px;
       transition: 0.7s;
     }
+    #navBar-home , #navBar-contact , #navBar-document {
+      font-family: "Raleway", sans-serif;
+      font-size: 15px;
+      color: #1d3557;
+      font-weight: 600;
+      line-height: 40px;
+    }
+  
   }
 }
 
@@ -143,11 +152,7 @@ p {
       font-weight: 600;
       line-height: 40px;
     }
-
-  
   }
-
-  
 
   .title2 {
     width: 300px;
@@ -164,9 +169,7 @@ p {
       font-weight: 500;
     }
     @media (min-width: 1024px) {
-    
-  align-self: center;
-
+      align-self: center;
     }
   }
 }
@@ -213,7 +216,6 @@ p {
     line-height: 20px;
   }
   @media (min-width: 768px) {
-    
     #tablet {
       position: absolute;
       top: 100%;

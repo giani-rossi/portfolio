@@ -459,6 +459,33 @@ function hmrAcceptRun(bundle, id) {
 //  changing colors by time of day
 const time = new Date().getHours();
 console.log(time);
+const $navBarHome = document.querySelector('.navBar-home');
+$navBarHome.onmouseenter = function() {
+    document.querySelector('#navBar-home').innerHTML = 'Home';
+    document.querySelector('#img-navBar-home').style.display = 'none';
+};
+$navBarHome.onmouseleave = function() {
+    document.querySelector('#navBar-home').innerHTML = '';
+    document.querySelector('#img-navBar-home').style.display = '';
+};
+const $navBarDocument = document.querySelector('.navBar-document');
+$navBarDocument.onmouseenter = function() {
+    document.querySelector('#navBar-document').innerHTML = 'Resume';
+    document.querySelector('#img-navBar-document').style.display = 'none';
+};
+$navBarDocument.onmouseleave = function() {
+    document.querySelector('#navBar-document').innerHTML = '';
+    document.querySelector('#img-navBar-document').style.display = '';
+};
+const $navBarContact = document.querySelector('.navBar-contact');
+$navBarContact.onmouseenter = function() {
+    document.querySelector('#navBar-contact').innerHTML = 'Contact';
+    document.querySelector('#img-navBar-contact').style.display = 'none';
+};
+$navBarContact.onmouseleave = function() {
+    document.querySelector('#navBar-contact').innerHTML = '';
+    document.querySelector('#img-navBar-contact').style.display = '';
+};
 // sections
 const $day = document.querySelector("#day");
 if (time > 6 && time <= 12) document.querySelector("#day").innerHTML = " morning";
