@@ -1,6 +1,7 @@
 //import '@iconfu/svg-inject'
 
 //  changing colors by time of day
+document.addEventListener("DOMContentLoaded", function () {
 const time = new Date().getHours();
 console.log(time);
 
@@ -99,8 +100,14 @@ function erase() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+
+
   // On DOM Load initiate the effect
   if (textArray.length) 
   setTimeout(type, newTextDelay + 250);
 });
+
+
+
+
+

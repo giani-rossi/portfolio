@@ -22,6 +22,8 @@
 
 <body id="switchColor">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!--  <div id="switch" class="switchButton">
 
         <input class="switchButton__checkbox" type="checkbox" name="" id="">
@@ -107,8 +109,9 @@
 
         <ul class="navBar__menu">
             <li class="navBar__menu__button navBar-home"><a href="#"></a>
-               <span id="navBar-home"></span>
-                <img id="img-navBar-home"  src="./styles/images/185038_home_house_icon.svg" alt="home" onload="SVGInject(this)">
+                <span id="navBar-home"></span>
+                <img id="img-navBar-home" src="./styles/images/185038_home_house_icon.svg" alt="home"
+                    onload="SVGInject(this)">
             </li>
             <li class="navBar__menu__button navBar-document"><a href="#"></a>
                 <span id="navBar-document"></span>
@@ -116,8 +119,8 @@
             </li>
             <li class="navBar__menu__button navBar-contact"><a href="#"></a>
                 <span id="navBar-contact"></span>
-                <img id="img-navBar-contact" src="./styles/images/728956_bubble_message_speech_chat_comment_icon.svg" alt="contact"
-                    onload="SVGInject(this)">
+                <img id="img-navBar-contact" src="./styles/images/728956_bubble_message_speech_chat_comment_icon.svg"
+                    alt="contact" onload="SVGInject(this)">
             </li>
         </ul>
     </nav>
@@ -126,7 +129,9 @@
         <div class='hero'>
             <div class="title">
 
-                <h1> Hey DUDE, <br / /> Have a <br / /> good<span id="day"> morning!&nbsp;</span></h1>
+                <h1>
+                    <main> Hey DUDE, </main> <br / /> Have a <br / /> good<span id="day"> morning!&nbsp;</span>
+                </h1>
             </div>
             <div class="title2">
                 <div class="title2__container">
@@ -146,7 +151,7 @@
                             <img src="./styles/images/5282551_tweet_twitter_twitter logo_icon.svg" alt="google icon"
                                 onload="SVGInject(this)">
                         </a></li>
-                    <li><a href="https://www.linkedin.com/gianina-sol-rossi">
+                    <li><a href="https://www.linkedin.com/in/gianina-sol-rossi/?originalSubdomain=ar">
                             <img src="./styles/images/5282542_linkedin_network_social network_linkedin logo_icon.svg"
                                 alt="linkedin icon" onload="SVGInject(this)">
                         </a></li>
@@ -193,7 +198,8 @@
             <p>Instituto Universitario Aeronautico - Cordoba, Argentina</p>
             <h2>Full Stack Developer</h2>
             <h3> Full Stack dev | Apr 2021 - Currently</h3>
-            <p>Certified in Web Development <br / /> Certified in JavaScript <br /> React - on going <br /> Back End - on going
+            <p>Certified in Web Development <br / /> Certified in JavaScript <br /> React - on going <br /> Back End -
+                on going
             </p>
 
         </div>
@@ -287,23 +293,96 @@
         </div>
 
         <div class="portfolio__projects">
-            <h1>PROJECTS</h1>
-            <h2>AMADOR WEBSITE</h2>
-            <h3>Freelance | Aug 2021</h3>
+            <div class="portfolio__projects__container">
+                <div class="card-column">
+                    <h1>PROJECTS</h1>
+                    <h2>AMADOR WEBSITE</h2>
+                    <h3>Freelance | Aug 2021</h3>
+                    <p>Work with design team to understand the idea. Use Figma for the mockup, wireframe. UI elements
+                        and use
+                        Balsamiq for prototyping.
+                        Write efficient, well-designed code and maintain software documentation. HTML / CSS (Sass) / Js
+                    </p>
 
-            <p>Work with design team to understand the idea. Use Figma for the mockup, wireframe. UI elements and use
-                Balsamiq for prototyping.
-                Write efficient, well-designed code and maintain software documentation. HTML / CSS (Sass) / Js</p>
-            <h2>ALQUILERES-TEMPORALES WEBSITE</h2>
-            <h3>Freelance - Final Project Coderhouse Bootcamp | Jun 2021</h3>
-            <p>- Developed a website such as Airbnb, with HTML / CSS (Sass) / Js
-                - Created high-quality mock-ups and prototypes with Figma and Balsamiq.</p>
-            <h2>MAKEUP ARTIST PORTFOLIO WEBSITE</h2>
-            <h3>Freelance - Project Coderhouse Bootcamp | May 2021</h3>
-            <p>- Developed website components using Bootstrap
-                - Created high-quality mock-ups and prototypes with Figma and Balsamiq.</p>
+                    <div class="card">
+                        <div class="border"></div>
+                        <img src="./styles/images/Screen Shot 2021-10-05 at 2.17.04 PM.png" />
+                        <h1 class="card1">AMADOR WEBSITE</h1>
+                        <div id="open1">
+                            <p class="text">more info</p>
+                            <div class="cardOpen infoCard1">
+                                <a href="#open" id="close1">X</a>
+                                <h1>AMADOR</h1>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed saepe cumque similique
+                                    debitis assumenda aspernatur consequatur asperiores eum dignissimos officiis!
+                                    Magnam,
+                                    dolorum? Minus, dignissimos? Quis mollitia nisi dicta nemo voluptatibus.</p>
+                            </div>
+                        </div>
+                    </div>
 
+
+                    <h2>ALQUILERES-TEMPORALES WEBSITE</h2>
+                    <h3>Freelance - Final Project Coderhouse Bootcamp | Jun 2021</h3>
+                    <p>- Developed a website such as Airbnb, with HTML / CSS (Sass) / Js
+                        - Created high-quality mock-ups and prototypes with Figma and Balsamiq.</p>
+
+                    <div class="card">
+                        <div class="border"></div>
+                        <img src="./styles/images/Screen Shot 2021-10-06 at 1.18.16 PM.png" />
+                        <h1 class="card2">ALQUILERES-TEMPORALES WEBSITE</h1>
+                       
+                        <div id="open2">
+                            <p class="text" >more info</p>
+                            <div class="cardOpen infoCard2">
+                                <a href="#open" id="close2">X</a>
+                                <h1>ALQUILERES-TEMPORALES</h1>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed saepe cumque similique
+                                    debitis assumenda aspernatur consequatur asperiores eum dignissimos officiis! Magnam,
+                                    dolorum? Minus, dignissimos? Quis mollitia nisi dicta nemo voluptatibus.</p>
+                            </div>
+                        </div>
+                    
+                    
+                    
+                    </div>
+
+
+                    <h2>MAKEUP ARTIST PORTFOLIO WEBSITE</h2>
+                    <h3>Freelance - Project Coderhouse Bootcamp | May 2021</h3>
+                    <p>- Developed website components using Bootstrap
+                        - Created high-quality mock-ups and prototypes with Figma and Balsamiq.</p>
+
+                    <div id="start" class="card">
+                        <div class="border"></div>
+                        <img src="./styles/images/Screen Shot 2021-10-06 at 1.21.39 PM.png" />
+                        <h1 class="card3">MAKEUP ARTIST PORTFOLIO WEBSITE</h1>
+                       
+                        <div id="open3">
+                            <p class="text" >more info</p>
+                            <div class="cardOpen infoCard3">
+                                <a href="#open" id="close3">X</a>
+                                <h1>MAKEUP ARTIST PORTFOLIO</h1>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed saepe cumque similique
+                                    debitis assumenda aspernatur consequatur asperiores eum dignissimos officiis! Magnam,
+                                    dolorum? Minus, dignissimos? Quis mollitia nisi dicta nemo voluptatibus.</p>
+                            </div>
+                        </div>
+                   
+                   
+                   
+                    </div>
+
+                </div>
+            </div>
         </div>
+
+
+
+    
+
+
+
 
     </section>
 
@@ -316,7 +395,7 @@
         <div class="contact__social">
             <p class="contact__social__find"> <img src="./styles/images/shuttle.svg" alt=""> Find me on:</p>
             <ul class="contact__social__media">
-                <a href="https://www.linkedin.com/gianina-sol-rossi">
+                <a href="https://www.linkedin.com/in/gianina-sol-rossi/?originalSubdomain=ar">
                     <li> LinkedIn</li>
                 </a>
                 <a href="https://github.com/giani-rossi">
@@ -355,13 +434,17 @@
 
 
 
-
-
     </section>
 
     <footer>
     </footer>
+
+
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/app.js"> </script>
+
+
+
 </body>
 
 </html>
