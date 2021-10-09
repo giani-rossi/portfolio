@@ -419,7 +419,8 @@ main:hover {
   display: none;
 }
 .portfolio__projects .active {
-  background-color: #482896;
+  background-color: #b9a4ee;
+  width: 100%;
 }
 .portfolio__projects .text {
   margin-left: 30px;
