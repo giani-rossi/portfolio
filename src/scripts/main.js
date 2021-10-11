@@ -1,8 +1,44 @@
-import '@iconfu/svg-inject'
+//import '@iconfu/svg-inject'
 
 //  changing colors by time of day
+document.addEventListener("DOMContentLoaded", function () {
 const time = new Date().getHours();
 console.log(time);
+
+const $navBarHome = document.querySelector('.navBar-home')
+$navBarHome.onmouseenter = function(){
+  document.querySelector('#navBar-home').innerHTML = 'Home'
+document.querySelector('#img-navBar-home').style.display= 'none';
+}
+
+$navBarHome.onmouseleave = function(){
+  document.querySelector('#navBar-home').innerHTML = ''
+  document.querySelector('#img-navBar-home').style.display= '';
+} 
+
+const $navBarDocument = document.querySelector('.navBar-document')
+$navBarDocument.onmouseenter = function(){
+  document.querySelector('#navBar-document').innerHTML = 'Resume'
+document.querySelector('#img-navBar-document').style.display= 'none';
+}
+
+$navBarDocument.onmouseleave = function(){
+  document.querySelector('#navBar-document').innerHTML = ''
+  document.querySelector('#img-navBar-document').style.display= '';
+}
+
+
+const $navBarContact = document.querySelector('.navBar-contact')
+$navBarContact.onmouseenter = function(){
+  document.querySelector('#navBar-contact').innerHTML = 'Contact'
+document.querySelector('#img-navBar-contact').style.display= 'none';
+}
+$navBarContact.onmouseleave = function(){
+  document.querySelector('#navBar-contact').innerHTML = ''
+  document.querySelector('#img-navBar-contact').style.display= '';
+}
+
+
 
 // sections
 const $day = document.querySelector("#day");
@@ -64,8 +100,14 @@ function erase() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+
+
   // On DOM Load initiate the effect
   if (textArray.length) 
   setTimeout(type, newTextDelay + 250);
 });
+
+
+
+
+

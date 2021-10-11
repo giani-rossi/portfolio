@@ -14,6 +14,8 @@
     "build": "parcel build src/*.html"
   },
   "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
     "node-sass": "^6.0.1",
     "parcel": "^2.0.0-rc.0",
     "sass": "^1.41.0"
@@ -24,6 +26,8 @@
   "homepage": "https://github.com/giani-rossi/portfolio#readme",
   "keywords": [],
   "dependencies": {
-    "@iconfu/svg-inject": "^1.2.3"
+    "@iconfu/svg-inject": "^1.2.3",
+    "@parcel/package-manager": "^2.0.0-rc.0",
+    "cors": "^2.8.5"
   }
 }

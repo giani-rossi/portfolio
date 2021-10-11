@@ -1,12 +1,16 @@
-// main color : #1d3557
+// background color : #d6f4f4
 // second color : #457b9d
 // other: #a8dadc
 // other : #ffe8d6
 // other : #f1faee
 // other : #e63946
 
+html {
+  line-height: 1.5;
+}
+
 body {
-  background-color: #f1faee;
+  background-color: #d6f4f4;
   min-height: 100vh;
 }
 
@@ -73,13 +77,33 @@ p {
   }
 }
 
+main {
+  line-height: 100px;
+  transition: all 0.5s;
+  -webkit-text-stroke: 4px #1d3557;
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: 7rem;
+  text-align: center;
+  color: transparent;
+  font-family: "Meta", sans-serif;
+  text-shadow: 10px 10px 0px #00f7ff, 15px 15px 0px #e601c0,
+    20px 20px 0px #e9019a, 25px 25px 0px #f40468, 45px 45px 10px #482896;
+  cursor: pointer;
+}
+
+main:hover {
+  font-variation-settings: "wght" 100, "ital" 0;
+  text-shadow: none;
+}
+
 .navBar {
   &__menu {
     display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 20%;
-    transform: translateY(-50%);
+    flex-direction: row;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     padding-left: 10px;
     & svg path {
       fill: #1d3557;
@@ -88,22 +112,45 @@ p {
       font-size: 10px;
     }
 
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 20%;
+      transform: translateY(-50%);
+      padding-left: 10px;
+      left: 0;
+    }
+
     &__button {
       width: 50px;
       height: 50px;
       margin-bottom: 10px;
       display: inline-block;
-      background-color: #e63946;
+      background-color: #b9a4ee;
       color: #f0f3bd;
       text-align: center;
       text-decoration: none;
       font-size: 40px;
       border-radius: 50px;
+      margin-left: 40px;
     }
     &__button:hover {
-      background-color: #e63946;
+      background-color: #b9a4ee;
       width: 200px;
       transition: 0.7s;
+    }
+    #navBar-home,
+    #navBar-contact,
+    #navBar-document {
+      font-family: "Raleway", sans-serif;
+      font-size: 15px;
+      color: #482896;
+      font-weight: 600;
+      line-height: 40px;
+      & svg {
+        color: #482896;
+      }
     }
   }
 }
@@ -143,11 +190,7 @@ p {
       font-weight: 600;
       line-height: 40px;
     }
-
-  
   }
-
-  
 
   .title2 {
     width: 300px;
@@ -160,13 +203,11 @@ p {
       margin-bottom: 25px;
       font-family: "Raleway", sans-serif;
       font-size: 20px;
-      color: #e63946;
+      color: #e601c0;
       font-weight: 500;
     }
     @media (min-width: 1024px) {
-    
-  align-self: center;
-
+      align-self: center;
     }
   }
 }
@@ -175,7 +216,10 @@ p {
 .portfolio,
 .contact {
   min-height: 100vh;
-  padding-left: 100px;
+  padding-left: 70px;
+  @media (min-width: 768px) {
+    padding-left: 150px;
+  }
 }
 
 .about {
@@ -193,7 +237,7 @@ p {
     margin-bottom: 25px;
     font-family: "Raleway", sans-serif;
     font-size: 30px;
-    color: #e63946;
+    color: #e601c0;
     font-weight: 400;
   }
   & p {
@@ -213,7 +257,6 @@ p {
     line-height: 20px;
   }
   @media (min-width: 768px) {
-    
     #tablet {
       position: absolute;
       top: 100%;
@@ -223,7 +266,7 @@ p {
 }
 
 .list {
-  margin-bottom: 70px;
+  margin-bottom: -70px;
 }
 
 .portfolio {
@@ -308,7 +351,7 @@ p {
     }
     & p {
       margin-top: 25px;
-      margin-bottom: 25px;
+      margin-bottom: 50px;
       font-family: "Raleway", sans-serif;
       font-size: 20px;
       color: #1d3557;
@@ -336,13 +379,86 @@ p {
       font-weight: 600;
     }
 
-    & p {
-      margin-top: 25px;
-      margin-bottom: 25px;
-      font-family: "Raleway", sans-serif;
-      font-size: 20px;
-      color: #1d3557;
-      line-height: 25px;
+    &__box {
+      width: 100px;
+      height: 100px;
+      background-color: #e63946;
+    }
+
+    &__container {
+      max-width: 800px;
+      margin: 0 auto;
+      & .card-column {
+        width: 75%;
+        //float: left;
+        // padding: 4%;
+
+        @media (min-width: 768px) {
+          width: 75%;
+          float: left;
+          padding: 4%;
+        }
+
+        & .card {
+          width: 92%;
+          max-width: 340px;
+          margin-left: auto;
+          margin-right: auto;
+          position: relative;
+          background: #b9a4ee;
+          color: #fff;
+          cursor: pointer;
+          margin-bottom: 60px;
+          @media (min-width: 768px) {
+            max-width: none;
+          }
+
+          & .card1,
+          & .card2,
+          & .card3 {
+            margin-top: 0px;
+            position: relative;
+            color: #fff;
+            position: relative;
+            padding: 50px 0px 0px 30px;
+            width: 90%;
+            font-size: 25px;
+            line-height: 35px;
+          }
+        }
+        & img {
+          width: 75%;
+          padding-left: 20%;
+          padding-top: 20%;
+        }
+      }
+
+      .border {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 6px;
+        border: 1.5px solid #fff;
+        opacity: 0.7;
+        left: 10px;
+        top: 10px;
+        z-index: -1;
+      }
+    }
+    .infoCard1,
+    .infoCard2,
+    .infoCard3 {
+      display: none;
+    }
+    .active {
+      background-color: #b9a4ee;
+     width: 100%;
+    }
+
+    .text {
+      margin-left: 30px;
+      margin-top: 5px;
+      z-index: 2;
     }
   }
 }
@@ -387,7 +503,7 @@ p {
       //margin-bottom: 20px;
       font-family: "Raleway", sans-serif;
       font-size: 15px;
-      color: #e63946;
+      color: #e601c0;
       line-height: 25px;
       text-decoration: none;
       margin-left: -50px;
@@ -431,7 +547,7 @@ p {
 .loginBox h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #e63946;
+  color: #b9a4ee;
   text-align: center;
 }
 
@@ -447,7 +563,7 @@ p {
       width: 100%;
       padding: 10px 0;
       font-size: 16px;
-      color: #e63946;
+      color: #b9a4ee;
       margin-bottom: 30px;
       border: none;
       border-bottom: 1px solid #fff;
@@ -465,7 +581,7 @@ p {
       left: 0;
       padding: 10px 0;
       font-size: 16px;
-      color: #e63946;
+      color: #b9a4ee;
       pointer-events: none;
       transition: 0.5s;
     }
@@ -477,7 +593,7 @@ p {
   display: inline-block;
   margin-left: 42px;
   padding: 10px 20px;
-  color: #e63946;
+  color: #b9a4ee;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -503,7 +619,7 @@ p {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #1d3557);
+  background: linear-gradient(90deg, transparent, #e601c0);
   animation: btn-anim1 1s linear infinite;
 }
 
@@ -522,7 +638,7 @@ p {
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #1d3557);
+  background: linear-gradient(180deg, transparent, #e601c0);
   animation: btn-anim2 1s linear infinite;
   animation-delay: 0.25s;
 }
@@ -542,7 +658,7 @@ p {
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #1d3557);
+  background: linear-gradient(270deg, transparent, #e601c0);
   animation: btn-anim3 1s linear infinite;
   animation-delay: 0.5s;
 }
@@ -562,7 +678,7 @@ p {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #1d3557);
+  background: linear-gradient(360deg, transparent, #e601c0);
   animation: btn-anim4 1s linear infinite;
   animation-delay: 0.75s;
 }

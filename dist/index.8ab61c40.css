@@ -1,0 +1,630 @@
+html {
+  line-height: 1.5;
+}
+
+body {
+  background-color: #d6f4f4;
+  min-height: 100vh;
+}
+
+p {
+  max-width: 80%;
+}
+
+.switchButton {
+  width: 75px;
+  height: 30px;
+  display: inline-block;
+  background-color: #e63946;
+  border-radius: 20px;
+  position: absolute;
+  left: 80%;
+  top: 10px;
+}
+.switchButton:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+}
+.switchButton__checkbox {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+}
+.switchButton__checkbox:checked + .switchButton__checkbox__label:before {
+  opacity: 0;
+}
+.switchButton__checkbox + .switchButton__checkbox__label {
+  user-select: none;
+  pointer-events: none;
+}
+.switchButton__checkbox + .switchButton__checkbox__label:before {
+  content: "";
+  background: #1d3557;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+}
+
+main {
+  line-height: 100px;
+  transition: all 0.5s;
+  -webkit-text-stroke: 4px #1d3557;
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: 7rem;
+  text-align: center;
+  color: transparent;
+  font-family: "Meta", sans-serif;
+  text-shadow: 10px 10px 0px #00f7ff, 15px 15px 0px #e601c0, 20px 20px 0px #e9019a, 25px 25px 0px #f40468, 45px 45px 10px #482896;
+  cursor: pointer;
+}
+
+main:hover {
+  font-variation-settings: "wght" 100, "ital" 0;
+  text-shadow: none;
+}
+
+.navBar__menu {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 10px;
+}
+.navBar__menu svg path {
+  fill: #1d3557;
+}
+.navBar__menu a {
+  font-size: 10px;
+}
+@media (min-width: 768px) {
+  .navBar__menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 20%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+    left: 0;
+  }
+}
+.navBar__menu__button {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  display: inline-block;
+  background-color: #b9a4ee;
+  color: #f0f3bd;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+  border-radius: 50px;
+  margin-left: 40px;
+}
+.navBar__menu__button:hover {
+  background-color: #b9a4ee;
+  width: 200px;
+  transition: 0.7s;
+}
+.navBar__menu #navBar-home,
+.navBar__menu #navBar-contact,
+.navBar__menu #navBar-document {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  color: #482896;
+  font-weight: 600;
+  line-height: 40px;
+}
+.navBar__menu #navBar-home svg,
+.navBar__menu #navBar-contact svg,
+.navBar__menu #navBar-document svg {
+  color: #482896;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.hero__list__menu {
+  display: inline-flex;
+  list-style: none;
+  margin: 0px;
+}
+.hero__list__menu li {
+  margin: 10px;
+  min-width: 60px;
+  text-align: center;
+}
+.hero__list__menu li svg path {
+  fill: #1d3557;
+}
+.hero .title h1 {
+  text-align: center;
+  margin-top: 100px;
+  font-family: "Raleway", sans-serif;
+  font-size: 35px;
+  color: #1d3557;
+  font-weight: 600;
+  line-height: 40px;
+}
+.hero .title2 {
+  width: 300px;
+  align-self: flex-end;
+  margin-left: 25px;
+}
+.hero .title2 p {
+  text-align: center;
+  font-style: italic;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #e601c0;
+  font-weight: 500;
+}
+@media (min-width: 1024px) {
+  .hero .title2 {
+    align-self: center;
+  }
+}
+
+.about,
+.portfolio,
+.contact {
+  min-height: 100vh;
+  padding-left: 70px;
+}
+@media (min-width: 768px) {
+  .about,
+.portfolio,
+.contact {
+    padding-left: 150px;
+  }
+}
+
+.about h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  color: #1d3557;
+  line-height: 50px;
+  font-weight: 600;
+}
+.about h2 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  color: #e601c0;
+  font-weight: 400;
+}
+.about p {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #1d3557;
+  line-height: 25px;
+}
+.about ul li {
+  margin-top: 20px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #1d3557;
+  line-height: 20px;
+}
+@media (min-width: 768px) {
+  .about #tablet {
+    position: absolute;
+    top: 100%;
+    transform: translateY(50%);
+  }
+}
+
+.list {
+  margin-bottom: -70px;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+.portfolio__resume h1 {
+  margin-top: 100px;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  color: #1d3557;
+  font-weight: 600;
+  line-height: 30px;
+}
+.portfolio__resume h2 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #1d3557;
+  line-height: 25px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.portfolio__resume h3 {
+  margin-top: 25px;
+  font-style: italic;
+  margin-bottom: 25px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #1d3557;
+  line-height: 20px;
+  font-weight: 600;
+}
+.portfolio__resume p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #1d3557;
+  line-height: 25px;
+}
+.portfolio__skills {
+  margin-top: 50px;
+}
+.portfolio__skills h1 {
+  margin-top: 100px;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  color: #1d3557;
+  font-weight: 600;
+  line-height: 50px;
+}
+.portfolio__skills ul li {
+  margin-left: 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #1d3557;
+  line-height: 20px;
+}
+.portfolio__skills__keys {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.portfolio__projects {
+  margin-top: 50px;
+}
+.portfolio__projects h1 {
+  margin-top: 100px;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  color: #1d3557;
+  font-weight: 600;
+  line-height: 50px;
+}
+.portfolio__projects p {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #1d3557;
+  line-height: 25px;
+}
+.portfolio__projects h2 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #1d3557;
+  line-height: 25px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.portfolio__projects h3 {
+  margin-top: 25px;
+  font-style: italic;
+  margin-bottom: 25px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #1d3557;
+  line-height: 20px;
+  font-weight: 600;
+}
+.portfolio__projects__box {
+  width: 100px;
+  height: 100px;
+  background-color: #e63946;
+}
+.portfolio__projects__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.portfolio__projects__container .card-column {
+  width: 75%;
+}
+@media (min-width: 768px) {
+  .portfolio__projects__container .card-column {
+    width: 75%;
+    float: left;
+    padding: 4%;
+  }
+}
+.portfolio__projects__container .card-column .card {
+  width: 92%;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background: #b9a4ee;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .portfolio__projects__container .card-column .card {
+    max-width: none;
+  }
+}
+.portfolio__projects__container .card-column .card .card1, .portfolio__projects__container .card-column .card .card2, .portfolio__projects__container .card-column .card .card3 {
+  margin-top: 0px;
+  position: relative;
+  color: #fff;
+  position: relative;
+  padding: 50px 0px 0px 30px;
+  width: 90%;
+  font-size: 25px;
+  line-height: 35px;
+}
+.portfolio__projects__container .card-column img {
+  width: 75%;
+  padding-left: 20%;
+  padding-top: 20%;
+}
+.portfolio__projects__container .border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  border: 1.5px solid #fff;
+  opacity: 0.7;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+.portfolio__projects .infoCard1,
+.portfolio__projects .infoCard2,
+.portfolio__projects .infoCard3 {
+  display: none;
+}
+.portfolio__projects .active {
+  background-color: #b9a4ee;
+  width: 100%;
+}
+.portfolio__projects .text {
+  margin-left: 30px;
+  margin-top: 5px;
+  z-index: 2;
+}
+
+.contact h2 {
+  margin-top: 100px;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  color: #1d3557;
+  line-height: 25px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.contact__email,
+.contact a {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #1d3557;
+  line-height: 25px;
+  text-decoration: none;
+}
+.contact__social__find {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #1d3557;
+  line-height: 25px;
+  text-decoration: none;
+}
+.contact__social__media,
+.contact__social li {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  color: #e601c0;
+  line-height: 25px;
+  text-decoration: none;
+  margin-left: -50px;
+}
+
+.loginBox {
+  margin-top: 20px;
+  margin-right: 100px;
+  position: absolute;
+  right: -40px;
+  width: 300px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .loginBox {
+    margin-top: 70px;
+    right: 0;
+    transform: translate(-50%);
+  }
+}
+@media (min-width: 1024px) {
+  .loginBox {
+    margin-top: 70px;
+    right: 0;
+    transform: translate(-50%);
+    left: 50%;
+  }
+}
+.loginBox h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #b9a4ee;
+  text-align: center;
+}
+
+.loginBox__user {
+  position: relative;
+}
+
+.loginBox__user input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #b9a4ee;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.loginBox__user label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #b9a4ee;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.loginBox form a {
+  position: relative;
+  display: inline-block;
+  margin-left: 42px;
+  padding: 10px 20px;
+  color: #b9a4ee;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.loginBox a:hover {
+  background: #1d3557;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.loginBox a span {
+  position: absolute;
+  display: block;
+}
+
+.loginBox a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e601c0);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+.loginBox a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #e601c0);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+.loginBox a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #e601c0);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+.loginBox a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #e601c0);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+/*# sourceMappingURL=index.8ab61c40.css.map */
