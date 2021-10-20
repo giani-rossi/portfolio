@@ -102,7 +102,7 @@ main:hover {
     flex-direction: row;
     position: absolute;
     top: 10%;
-    left: 50%;
+    left: 44%;
     transform: translateX(-50%);
     padding-left: 10px;
     & svg path {
@@ -452,7 +452,7 @@ main:hover {
     }
     .active {
       background-color: #b9a4ee;
-     width: 100%;
+     //width: 100%;
     }
 
     .text {

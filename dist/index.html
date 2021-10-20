@@ -20,9 +20,13 @@
     <title>::Giani's Portfolio::</title>
 </head>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 <body id="switchColor">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
     <!--  <div id="switch" class="switchButton">
 
         <input class="switchButton__checkbox" type="checkbox" name="" id="">
@@ -104,18 +108,18 @@
     -->
 
 
-    <nav class="navBar">
+    <nav class="navBar" id="navBar">
 
         <ul class="navBar__menu">
-            <li class="navBar__menu__button navBar-home"><a href="#"></a>
+            <li class="navBar__menu__button navBar-home"><a id="navBar-home" href="#navBar"></a>
                 <span id="navBar-home"></span>
                 <img id="img-navBar-home" src="/185038_home_house_icon.7bda8384.svg" alt="home" onload="SVGInject(this)">
             </li>
-            <li class="navBar__menu__button navBar-document"><a href="#"></a>
+            <li class="navBar__menu__button navBar-document"><a id="navBar-document" href="#portfolio"></a>
                 <span id="navBar-document"></span>
                 <img id="img-navBar-document" src="/hoja.653a0a0a.svg" alt="document" onload="SVGInject(this)">
             </li>
-            <li class="navBar__menu__button navBar-contact"><a href="#"></a>
+            <li class="navBar__menu__button navBar-contact"><a id="navBar-contact" href="#contact"></a>
                 <span id="navBar-contact"></span>
                 <img id="img-navBar-contact" src="/728956_bubble_message_speech_chat_comment_icon.c2f71348.svg" alt="contact" onload="SVGInject(this)">
             </li>
@@ -160,7 +164,7 @@
     <section class="about">
 
         <div id="tablet">
-            <h1>ABOUT</h1>
+            <h1 id="fast" class="fast">ABOUT</h1>
             <h2>Gianina Rossi</h2>
             <p>I'm a Telecommunications Engineer with 14 years of experience on field. Currently
                 I'm looking for a change of my current career path as a developer. My passion lies in learning
@@ -182,7 +186,7 @@
 
 
 
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
 
         <div class="portfolio__resume">
             <h1>ACADEMIC BACKGROUND</h1>
@@ -321,7 +325,7 @@
                         <div class="border"></div>
                         <img src="/Screen%20Shot%202021-10-06%20at%201.18.16%20PM.76deebc7.png">
                         <h1 class="card2">ALQUILERES-TEMPORALES WEBSITE</h1>
-                       
+
                         <div id="open2">
                             <p class="text">more info</p>
                             <div class="cardOpen infoCard2">
@@ -330,9 +334,9 @@
                                 <p id="description2"></p>
                             </div>
                         </div>
-                    
-                    
-                    
+
+
+
                     </div>
 
 
@@ -345,7 +349,7 @@
                         <div class="border"></div>
                         <img src="/Screen%20Shot%202021-10-06%20at%201.21.39%20PM.60fdc9ac.png">
                         <h1 class="card3">MAKEUP ARTIST PORTFOLIO WEBSITE</h1>
-                       
+
                         <div id="open3">
                             <p class="text">more info</p>
                             <div class="cardOpen infoCard3">
@@ -354,9 +358,9 @@
                                 <p id="description3"></p>
                             </div>
                         </div>
-                   
-                   
-                   
+
+
+
                     </div>
 
                 </div>
@@ -365,14 +369,14 @@
 
 
 
-    
+
 
 
 
 
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
 
         <h2>CONTACT ME</h2>
         <p class="contact__email"> <img src="/shuttle.7973c44b.svg" alt=""> Keep in touch!
@@ -397,24 +401,27 @@
         </p></div><!-- End #Contact -->
 
         <div>
+
             <div class="loginBox">
                 <h2>Let's talk!</h2>
-                <form>
+
+                <form method="post" id="send">
                     <div class="loginBox__user">
-                        <input type="text" name="" required="" placeholder="Name">
+                        <input id="name" type="text" name="name" required="" placeholder="Name">
 
                     </div>
                     <div class="loginBox__user">
-                        <input type="text" name="" required="" placeholder="Message">
+                        <input id="message" type="text" name="description" required="" placeholder="Message">
 
                     </div>
-                    <a href="#">
+                    <a id="buttonForm" href="#" type="submit">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         Submit
                     </a>
+                    <div id="beforeSend"></div>
                 </form>
             </div>
 
@@ -569,12 +576,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"1vwLN":[function(require,module,exports) {
+})({"dravY":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "4e5dac8afe405db7";
-module.bundle.HMR_BUNDLE_ID = "f3119d4415ba90da";
+module.bundle.HMR_BUNDLE_ID = "b2445c3f3a6e8061";
 "use strict";
 function _createForOfIteratorHelper(o, allowArrayLike) {
     var it;
@@ -883,10 +890,10 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}]},["1vwLN"], null, "parcelRequire32ad")
+},{}]},["dravY"], null, "parcelRequire32ad")
 
 </script>
-
+    <script src="/index.9ee15f27.js"></script>
 
 
 </body>

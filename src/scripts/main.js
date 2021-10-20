@@ -105,6 +105,7 @@ function erase() {
   // On DOM Load initiate the effect
   if (textArray.length) 
   setTimeout(type, newTextDelay + 250);
+
 });
 
 

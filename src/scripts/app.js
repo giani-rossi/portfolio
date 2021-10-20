@@ -44,12 +44,11 @@ debitis assumenda aspernatur consequatur asperiores eum dignissimos officiis",
   );
 
   $("#open1").on("click", function () {
-
     $(".infoCard1").addClass("active");
     $(".active").css("position", "fixed");
     $(".active").css("display", "block");
-     $(".active").css("z-index", "5");
-    //$('.active').css('width', '$(window).width()')
+    $(".active").css("z-index", "5");
+    $(".active").fadeIn("slow");
     $(".active").css("top", "0");
     $(".active").css("bottom", "0");
     $(".active").css("left", "0");
@@ -62,6 +61,7 @@ debitis assumenda aspernatur consequatur asperiores eum dignissimos officiis",
     $(".infoCard1").css("display", "none");
     $(".infoCard2").css("display", "none");
     $(".infoCard3").css("display", "none");
+    $(".active").fadeOut("slow");
 
     return false;
   });
@@ -70,11 +70,12 @@ debitis assumenda aspernatur consequatur asperiores eum dignissimos officiis",
     $(".infoCard2").addClass("active");
     $(".active").css("position", "fixed");
     $(".active").css("display", "block");
-     $(".active").css("z-index", "5");
+    $(".active").css("z-index", "5");
     //$('.active').css('width', '$(window).width()')
     $(".active").css("top", "0");
     $(".active").css("bottom", "0");
     $(".active").css("left", "0");
+    $(".active").fadeIn("slow");
     project2.callProject2();
     return false;
   });
@@ -84,30 +85,108 @@ debitis assumenda aspernatur consequatur asperiores eum dignissimos officiis",
     $(".infoCard1").css("display", "none");
     $(".infoCard2").css("display", "none");
     $(".infoCard3").css("display", "none");
+    $(".active").fadeOut("slow");
 
     return false;
   });
 
-  $("#open3").on("click", function () {
+  $("#open3").click(function () {
     $(".infoCard3").addClass("active");
-
     $(".active").css("position", "fixed");
     $(".active").css("display", "block");
-     $(".active").css("z-index", "5");
+    $(".active").css("z-index", "5");
     //$('.active').css('width', '$(window).width()')
     $(".active").css("top", "0");
     $(".active").css("bottom", "0");
     $(".active").css("left", "0");
+
+    $("#open").fadeIn(5000);
+
     project3.callProject3();
     return false;
   });
 
   $("#close3").on("click", function () {
     $(".infoCard3").removeClass("active");
+
     $(".infoCard1").css("display", "none");
     $(".infoCard2").css("display", "none");
     $(".infoCard3").css("display", "none");
 
     return false;
   });
+
+  $(".navBar-home").on("click", function () {
+    $(".navBar-home").animate(
+      {
+        width: "100px",
+      },
+      500
+    );
+  });
+  $(".navBar-document").on("click", function () {
+    $(".navBar-document").animate(
+      {
+        width: "100px",
+      },
+      500
+    );
+  });
+  $(".navBar-contact").on("click", function () {
+    $(".navBar-contact").animate(
+      {
+        width: "100px",
+      },
+      500
+    );
+  });
+/*
+  let $buttonForm = document.getElementById("buttonForm");
+  $buttonForm.addEventListener("click", function () {
+    const $nameForm = document.getElementById("name");
+    localStorage.setItem("nombre", $nameForm.value);
+    const $messageForm = document.getElementById("message");
+    localStorage.setItem("mensaje", $messageForm.value);
+    alert("Gracias por tu mensaje 😊🌈 ");
+  });
+
+  const $infoRetrieve = {
+    nombre: "gianina ",
+    mensaje: "hola",
+  };
+
+  let $storedName = localStorage.getItem("nombre");
+  $infoRetrieve.nombre = $storedName;
+  let $storedMessage = localStorage.getItem("mensaje");
+  $infoRetrieve.mensaje = $storedMessage;
+  console.log($infoRetrieve);
+*/
+/*
+  $(function () {
+    $("#buttonForm").click(function () {
+      const parametros = {
+        nombre: "gianina ",
+        mensaje: "hola",
+      };  
+      $.ajax ({
+        data: parametros,
+        url: 'server.php',
+        method:'POST',
+        beforeSend: function(){
+          $('#beforeSend').text('Se está enviando tu info')
+        }
+      
+      })
+
+    });
+  });
+
+
+*/
+
+
+
 });
+
+
+

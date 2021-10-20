@@ -86,7 +86,7 @@ main:hover {
   flex-direction: row;
   position: absolute;
   top: 10%;
-  left: 50%;
+  left: 44%;
   transform: translateX(-50%);
   padding-left: 10px;
 }
@@ -420,7 +420,6 @@ main:hover {
 }
 .portfolio__projects .active {
   background-color: #b9a4ee;
-  width: 100%;
 }
 .portfolio__projects .text {
   margin-left: 30px;
